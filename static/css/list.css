@@ -1,0 +1,87 @@
+body{
+  background-color: white;
+  color: black;
+}
+.one{
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    border: 1px solid;
+    text-align: center;
+    list-style-position: inside;
+
+}
+.two{
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    border: 1px solid;
+    list-style-position: inside;
+    margin-top: 10px;
+    text-align: center;
+   
+
+}
+.three{
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    border: 1px solid;
+    text-align: center;
+    list-style-position: inside;
+    margin-top: 10px;
+
+}
+.four{
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    border: 1px solid;
+    list-style-position: inside;
+    margin-top: 10px;
+    text-align: center;
+
+}
+.five{
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    border: 1px solid;
+    list-style-position: inside;
+    text-align: center;
+    margin-top: 10px;
+
+}
+.six{
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    border: 1px solid;
+    text-align: center;
+    list-style-position: inside;
+    margin-top: 10px;
+
+}
+.b-1{
+    font-weight: bold;
+}
+.ol {
+    list-style-type: none;
+    counter-reset: item;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ol > li {
+    display: table;
+    counter-increment: item;
+    margin-bottom: 0.6em;
+  }
+  
+  .ol > li:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.6em;    
+  }
+  
+  li ol > li {
+    margin: 0;
+  }
+  
+  li ol > li:before {
+    content: counters(item, ".") " ";
+  }

@@ -1,0 +1,243 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Basic accounting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Basic accounting for small business" />
+<meta name="author" content="http://webthemez.com" />
+<!-- css -->
+<link href="{% static '../static/css/css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href="{% static '../static/css/css/fancybox/jquery.fancybox.css' %}" rel="stylesheet">
+<link href="{% static '../static/lib/owlcarousel/assets/owl.carousel.css' %}" rel="stylesheet" />
+<link href="{% static '../static/css/css/flexslider.css' %}" rel="stylesheet" />
+<link href="{% static '../static/lib/owlcarousel/assets/owl.carousel.css' %}" rel="stylesheet" />
+<link href="{% static '../static/css/css/style.css' %}" rel="stylesheet" />
+<link href="{% static '../static/css/css/list.css' %}" rel="stylesheet"/>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CETSC852RW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CETSC852RW');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8140667750202773"
+     crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+		<header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<a class="navbar-brand" href="#">Start Your Business</a>
+                </div>
+                <div class="navbar-collapse collapse ">
+					<ul class="nav navbar-nav">
+                        <li><a href="{% url 'index' %}">Home</a></li> 
+						<li><a href="{% url 'entrepreneur' %}">Entrepreneurship</a></li>
+						<li><a href="{% url 'sales' %}">Sales</a></li>
+                        <li class="active"><a href="{% url 'finance' %}">Finance</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header><!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">Finace</h2>
+			</div>
+		</div>
+	</div>
+	{% for post in post %}
+
+  <section id="content">
+		<div class="container-fluid pt-5">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-lg-6 text-center mb-5">
+						<small class="d-inline bg-primary text-white text-uppercase font-weight-bold px-1">Table of content</small>
+						<h1 class="mt-2 mb-3">Contents</h1>
+						<ol class="ol">
+							<li>{{post.content}}</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+  <section class="post">
+		<article class="text">
+			<div class="container-fluid py-5">
+				<div class="container">
+					<div class="row align-items-center pb-1">
+						<div class="col-lg-5">
+					<img class="img-thumbnail p-3" src="{{post.image1.url}}" alt="">
+						</div>
+						<div class="col-lg-7 mt-5 mt-lg-0">
+							<small class="bg-primary text-white text-uppercase font-weight-bold px-1">{{post.title}}</small>
+							<h1 class="mt-2 mb-4">{{post.headig1}}</h1>
+							<p class="mb-4">{{post.body1}}</p>
+							<ul>
+								<li class="b-1">{{post.list1}}</li>
+								<p>{{post.body_list1}}</p>
+								<li class="b-1">{{post.list2}}</li>
+								<p>{{post.body_list2}}</p>
+								<li class="b-1">{{post.list3}}</li>
+								<p>{{post.body_list3}}</p>
+							</ul>
+							
+						</div>
+					</div>
+					
+					<div class="row align-items-center pb-1">
+						<div class="col-lg-5">
+						<img class="img-thumbnail p-3" src="{{post.image2.url}}" alt="">
+						</div>
+						<div class="col-lg-7 mt-5 mt-lg-0">
+						<h1 class="mt-2 mb-4">{{post.heading2}}</h1>
+						<p>{{post.body2}}</p>
+							<ol type="a">
+								<li class="b-1">{{post.list4}}</li>
+								<p>{{post.body_list4}}</p>
+								<ul>
+									<li class="b-1">{{post.list5}}</li>
+									<p>{{post.body_list5}}</p>
+									<li class="b-1">{{post.list6}}</li>
+									<p>{{post.body_list6}}</p>
+									<li class="b-1">{{post.list7}}</li>
+									<p>{{post.body_list7}}</p>
+									<li class="b-1">{{post.list8}}</li>
+									<p>{{post.body_list8}}</p>
+							        <li class="b-1">{{post.list9}}</li>
+									<p>{{post.body_list9}}</p>
+									<li class="b-1">{{post.list10}}</li>
+									<p>{{post.body_list10}}</p>
+								</ul>
+							</ol>
+							
+						</div>
+					</div>
+				</div>
+				  <div class="container-fluid py-5">
+				<div class="container">
+					<div class="row align-items-center pb-1">
+						<div class="col-lg-5">
+							<img class="img-thumbnail p-3" src="{{post.image3.url}}" alt="">
+						</div>
+						<div class="col-lg-7 mt-5 mt-lg-0">
+							
+							<h1 class="mt-2 mb-4">{{post.heading3}}</h1>
+							<p>{{post.body3}}</p>
+							<ol type="a">
+								<li class="b-1">{{post.list11}}</li>
+								<p>{{post.body_list11}}</p>
+								<li class="b-1">{{post.list12}}</li>
+								<p>{{post.body_list12}}</p>
+								<li class="b-1">{{post.list13}}</li>
+								<p>{{post.body_list13}}</p>
+								<li class="b-1">{{post.list14}}</li>
+								<p>{{post.body_list14}}</p>
+								<li class="b-1">{{post.list15}}</li>
+								<p>{{post.body_list15}}</p>
+								<li class="b-1">{{post.list16}}</li>
+								<p>{{post.body_list16}}</p>
+							</ol>
+							
+						</div>
+					</div>
+					<div class="row align-items-center pb-1">
+						<div class="col-lg-5">
+							<img class="img-thumbnail p-3" src="{{post.image4.url}}" alt="">
+						</div>
+						<div class="col-lg-7 mt-5 mt-lg-0">
+							<h1 class="mt-2 mb-4">{{post.heading4}}</h1>
+							<p>{{post.body4}}</p>
+							<ol type="a">
+								<li class="b-1">{{post.list17}}</li>
+								<p>{{post.body_list17}}</p>
+								<li class="b-1">{{post.list18}}</li>
+								<p>{{post.body_list18}}</p>
+								<li class="b-1">{{post.list19}}</li>
+								<p>{{post.body_list19}}</p>
+								<li class="b-1">{{post.list20}}</li>
+								<p>{{post.body_list20}}</p>
+								<li class="b-1">{{post.list21}}</li>
+								<p>{{post.body_list21}}</p>
+							</ol>
+							
+						</div>
+					</div>
+		</article>
+	</section>
+	{% endfor %}
+	<amp-auto-ads type="adsense"
+        data-ad-client="ca-pub-8140667750202773">
+    </amp-auto-ads>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">Start Your Business</h5>
+						
+		<div id="sub-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="copyright">
+							<p>
+								<span>&copy; Above Site All right reserved. Blog By </span>Mtivos<a href="#" target="_blank">WebMaker</a>
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<ul class="social-network">
+							<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+							<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{% static '../static/css/js/jquery.js' %}"></script>
+<script src="{% static '../static/css/js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static '../static/css/js/bootstrap.min.js' %}"></script>
+<script src="{% static '../static/css/js/jquery.fancybox.pack.js' %}"></script>
+<script src="{% static '../static/css/js/jquery.fancybox-media.js' %}"></script> 
+<script src="{% static '../static/css/js/portfolio/jquery.quicksand.js' %}"></script>
+<script src="{% static '../static/css/js/portfolio/setting.js' %}"></script>
+<script src="{% static '../static/css/js/jquery.flexslider.js' %}"></script>
+<script src="{% static '../static/css/js/animate.js' %}"></script>
+<script src="{% static '../static/css/js/custom.js' %}"></script>
+<script src="{% static '../static/lib/owlcarousel/owl.carousel.js' %}"></script>
+</html>
